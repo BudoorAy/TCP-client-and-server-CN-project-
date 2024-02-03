@@ -6,14 +6,12 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class TCPServer {
-    static ServerSocket serverSocket;
     public static void main(String[] args) {
         int port = 1234; // Specify the port number here
 
         try {
             ServerSocket serverSocket = new ServerSocket(port);
             System.out.println("Server is running and listening on port " + port);
-            serverSocket.close();
 
             while (true) {
                 Socket clientSocket = serverSocket.accept();
